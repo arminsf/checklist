@@ -74,15 +74,17 @@ function Tasklist({ list, setList, focusedTask, setFocusedTask }) {
         <BiChevronDown
           className="absolute left-0 text-2xl text-gray-400 hover:text-gray-500"
           onClick={() => setDoneCollapsed(!doneCollapsed)}
+          hidden={doneCollapsed}
         />
         <BiChevronRight
           className="absolute left-0 text-2xl text-gray-400 hover:text-gray-500"
           onClick={() => setDoneCollapsed(!doneCollapsed)}
+          hidden={!doneCollapsed}
         />
-        <p className="text-gray-400">done</p>
+        <p className="text-gray-400 ml-6">done</p>
         <div className="left-[50%] bottom-50% w-full h-px border-gray-400 border-b-1"></div>
       </div>
-      {listDone.map((t, i, arr) => componentDisp(t, i, arr, 1))}
+      {!doneCollapsed ? listDone.map((t, i, arr) => componentDisp(t, i, arr, 1)) : (<></>)}
       {emptyMessage}
     </div>
   );

@@ -82,6 +82,7 @@ function Task({
                 if (e.ctrlKey) {
                   e.preventDefault();
                   toggleChecked();
+                  setFocusedTask(index);
                   break;
                 }
 

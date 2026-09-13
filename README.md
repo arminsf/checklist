@@ -1,3 +1,3 @@
 # checklist
 
-A task managing app built with React.
+A locally persistent todo list built in react. The state management is broken.

@@ -61,7 +61,8 @@ function Tasklist({ list, setList, focusedTask, setFocusedTask }) {
     listAll.length === 0 ? (
       <span className="flex flex-col place-items-center text-gray-400 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">
         <img className="max-h-75 shrink-0 aspect-auto" src={bocchi} />
-        nothing here...
+        nothing here... 
+          <a className="select-text text-sky-500 underline pointer-events-auto" href="https://www.pixiv.net/artworks/102485377">art</a>
       </span>
     ) : (
       <></>
